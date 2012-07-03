@@ -620,9 +620,6 @@
   marker-spacing: 200;
   marker-file: url(img/icon/oneway.svg);
   [oneway=-1] { marker-file: url(img/icon/oneway-reverse.svg); }
-  [zoom=15] { marker-transform: "scale(0.75 + @text_adjust)"; }
-  [zoom=16] { marker-transform: "scale(1.0 * @text_adjust)"; }
-  [zoom=17] { marker-transform: "scale(1.0 * @text_adjust)"; }
 }
 
 

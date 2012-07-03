@@ -114,7 +114,7 @@ Map { background-color: @water; }
 #water_gen1[zoom>9][zoom<=12],
 #water[zoom>12][zoom<=15] {
   polygon-fill: @water;
-  polygon-gamma: 0.75;
+ /* polygon-gamma: 0.75; */
 }
 
 #water[zoom>=16] {
