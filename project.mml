@@ -741,7 +741,7 @@
       "status": "on"
     }
   ],
-  "scale": 2,
+  "scale": 1,
   "metatile": 2,
   "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
   "description": "",
