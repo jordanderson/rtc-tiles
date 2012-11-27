@@ -78,7 +78,7 @@ come in as well.
   line-opacity: 0.8;
   line-dasharray: 3,2; 
   [zoom=14] {line-opacity: 1.0; }
-  [zoom=15] {line-dasharray: 3,2;}
+  [zoom>=15] {line-dasharray: 3,2;}
   
 }
 
@@ -86,7 +86,7 @@ come in as well.
   line-color: #fff;
   [zoom=15] {  line-width: 3.5 + @width_adjust; }
   [zoom=16] {  line-width: 5 + @width_adjust; }
-  [zoom=17] {  line-width: 6 + @width_adjust; }
+  [zoom>=17] {  line-width: 6 + @width_adjust; }
 }
 
 #greenway[zoom>=12] {
@@ -101,7 +101,7 @@ come in as well.
   [zoom=14] { line-width: 0.8 + @width_adjust; }
   [zoom=15] { line-width: 1.2 + @width_adjust; }
   [zoom=16] { line-width: 2.0 + @width_adjust; }
-  [zoom=17] { line-width: 3.0 + @width_adjust; }
+  [zoom>=17] { line-width: 3.0 + @width_adjust; }
 }
 
 /* ---- Casing ----------------------------------------------- */

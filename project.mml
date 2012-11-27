@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 17,
+  "maxzoom": 18,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "palette.mss",
@@ -627,7 +627,7 @@
     {
       "Datasource": {
         "dbname": "planet_osm",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "host": "127.0.0.1",
         "id": "motorway_label",
@@ -635,9 +635,10 @@
         "password": "",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
+        "table": "( SELECT way, highway AS type, rtc_street_abbrev(\"name\") as test_name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
@@ -645,12 +646,19 @@
       "name": "motorway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        -179.9999999749438,
+        -85.051,
+        179.9999999749438,
+        85.051
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
         "dbname": "planet_osm",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "host": "127.0.0.1",
         "id": "mainroad_label",
@@ -658,9 +666,10 @@
         "password": "",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
+        "table": "( SELECT way, highway AS type, rtc_street_abbrev(\"name\") as test_name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
@@ -668,12 +677,19 @@
       "name": "mainroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        -179.9999999749438,
+        -85.051,
+        179.9999999749438,
+        85.051
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
         "dbname": "planet_osm",
-        "extent": "-20037508.34 -20037508.34 20037508.34 20037508.34",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
         "geometry_field": "way",
         "host": "127.0.0.1",
         "id": "minorroad_label",
@@ -681,9 +697,10 @@
         "password": "",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
+        "table": "( SELECT way, highway AS type, rtc_street_abbrev(\"name\") as test_name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
         "type": "postgis",
-        "user": "osm"
+        "user": "osm",
+        "extent_cache": "auto"
       },
       "class": "",
       "geometry": "linestring",
@@ -691,7 +708,14 @@
       "name": "minorroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
-      "status": "on"
+      "status": "on",
+      "extent": [
+        -179.9999999749438,
+        -85.051,
+        179.9999999749438,
+        85.051
+      ],
+      "advanced": {}
     },
     {
       "Datasource": {
@@ -717,7 +741,7 @@
       "status": "on"
     }
   ],
-  "scale": 1,
+  "scale": 2,
   "metatile": 2,
   "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
   "description": "",
