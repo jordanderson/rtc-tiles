@@ -717,6 +717,8 @@
       "status": "on"
     }
   ],
+  "scale": 1,
+  "metatile": 2,
   "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
   "description": "",
   "name": "Ride the City"

@@ -38,6 +38,8 @@
 #landuse_gen0[zoom>3][zoom<=9],
 #landuse_gen1[zoom>9][zoom<=12],
 #landuse[zoom>12] {
+  
+  [type='wetland']       { polygon-fill: @water; }
   [type='cemetery']      { polygon-fill: @cemetery; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
@@ -73,7 +75,12 @@
   [zoom=11] { line-width: 1.5 + @width_adjust; }
   [zoom>=12] { line-width: 2.0 + @width_adjust; }
 }
- 
+
+#landuse[type='wetland'][zoom>11] {
+  [zoom>11][zoom<=14] { polygon-pattern-file:url(img/marsh-16.png); }
+  [zoom>14] { polygon-pattern-file:url(img/marsh-32.png);}
+}
+
 #landuse_overlays[type='wetland'][zoom>11] {
   [zoom>11][zoom<=14] { polygon-pattern-file:url(img/marsh-16.png); }
   [zoom>14] { polygon-pattern-file:url(img/marsh-32.png);}
@@ -230,3 +237,23 @@ Map { background-color: @water; }
   line-color:darken(@park,5);
 
 }
+
+/* ================================================================== */
+/* SUBWAY ICONS
+/* ================================================================== */
+/*
+#subway {
+  [zoom=15] {
+    point-file: url(./res/metro-10.png);
+    point-opacity: 0.8;
+  }
+  [zoom=16] {
+    point-file: url(./res/metro-15.png);
+    point-allow-overlap: true;
+  }
+  [zoom=17] {
+    point-file: url(./res/metro-15.png);
+    point-allow-overlap: true; 
+  }
+}
+*/

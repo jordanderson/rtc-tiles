@@ -582,9 +582,9 @@
     text-size:10 + @text_adjust;
 }
 
-#mainroad_label[type='primary'][zoom>12],
-#mainroad_label[type='secondary'][zoom>13],
-#mainroad_label[type='tertiary'][zoom>13] {
+#mainroad_label[type='primary'][zoom>11],
+#mainroad_label[type='secondary'][zoom>12],
+#mainroad_label[type='tertiary'][zoom>12] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
@@ -596,7 +596,7 @@
   [zoom=17] { text-size:11 + @text_adjust; }
 }
 
-#minorroad_label[zoom>14] {
+#minorroad_label[zoom>13] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;

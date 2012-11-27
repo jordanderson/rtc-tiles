@@ -44,7 +44,7 @@
     <Datasource>
        <Parameter name="dbname"><![CDATA[planet_osm]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.34 -20037508.34 20037508.34 20037508.34]]></Parameter>
-       <Parameter name="file"><![CDATA[/Users/jordandrsn/Documents/MapBox/project/RidetheCity/layers/land/10m-land.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/Users/jordan/Documents/MapBox/project/RidetheCity/layers/land/10m-land.shp]]></Parameter>
        <Parameter name="host"><![CDATA[127.0.0.1]]></Parameter>
        <Parameter name="id"><![CDATA[land]]></Parameter>
        <Parameter name="password"><![CDATA[]]></Parameter>
@@ -100,7 +100,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>processed_p</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/Users/jordandrsn/Documents/MapBox/project/RidetheCity/layers/processed_p/coastline-good.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/Users/jordan/Documents/MapBox/project/RidetheCity/layers/processed_p/coastline-good.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -116,7 +116,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>shoreline_300</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/Users/jordandrsn/Documents/MapBox/project/RidetheCity/layers/shoreline_300/shoreline_300.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/Users/jordan/Documents/MapBox/project/RidetheCity/layers/shoreline_300/shoreline_300.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
