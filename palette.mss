@@ -146,7 +146,7 @@ Map { font-directory: url(./fonts); }
 
 @poi_text:          #888 * @retina_color;
 
-@road_text:         #555 * @retina_color;
+@road_text:         #444 * @retina_color;
 @road_halo:         #fff;
 
 @other_text:        #888 * @retina_color;

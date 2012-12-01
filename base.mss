@@ -17,7 +17,8 @@
   polygon-gamma: 0.75;
 }
 
-#processed_p[zoom>=14]
+
+#processed_p[zoom>=15]
 {
   line-width: 6 + @width_adjust;
   line-color: lighten(@coast_outer,5);
@@ -32,8 +33,9 @@
     building-height: 5.0; 
     line-width: 6 + @width_adjust; 
   }
-  [zoom=17] { line-width: 8 + @width_adjust; }
+  [zoom>=17] { line-width: 8 + @width_adjust; }
 }
+
 
 #landuse_gen0[zoom>3][zoom<=9],
 #landuse_gen1[zoom>9][zoom<=12],
@@ -126,11 +128,11 @@ Map { background-color: @water; }
 
 #water[zoom>=16] {
   building-fill: @water;
-  building-height: 3;
   line-width: 2 + @width_adjust;
   line-color: lighten(@coast_outer,5);
   line-opacity: 0.6;
 }
+
 
 /* ================================================================== */
 /* WATER WAYS
