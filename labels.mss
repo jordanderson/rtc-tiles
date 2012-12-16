@@ -564,7 +564,7 @@
 
 #motorway_label[type='motorway'][zoom>9], 
 #motorway_label[type='trunk'][zoom>9] {
-  text-name:'[test_name]';
+  text-name:'[name]';
   text-face-name:@sans; 
   text-placement:line;
   text-fill:@road_text;
@@ -588,7 +588,7 @@
 #mainroad_label[type='primary'][zoom>11],
 #mainroad_label[type='secondary'][zoom>12],
 #mainroad_label[type='tertiary'][zoom>12] {
-  text-name:'[test_name]';
+  text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
   text-fill:@road_text;
@@ -603,7 +603,7 @@
 }
  
 #minorroad_label[zoom>13] {
-  text-name:'[test_name]';
+  text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
   text-fill:@road_text;
@@ -633,6 +633,8 @@
   marker-spacing: 200;
   marker-line-color: #fff;
   marker-file: url(img/icon/oneway.svg);
+  [zoom=17] {marker-transform:"scale(1.5)";}
+  [zoom=18] {marker-transform:"scale(2)";}
   [oneway=-1] { marker-file: url(img/icon/oneway-reverse.svg); }
 }
 
