@@ -59,8 +59,8 @@ come in as well.
 @rdz13_maj: 3;   @rdz13_med: 1.5; @rdz13_min: 1;
 @rdz14_maj: 5 + @width_adjust;   @rdz14_med: 3.5 + @width_adjust;   @rdz14_min: 3.5 + @width_adjust;
 @rdz15_maj: 6 + @width_adjust;   @rdz15_med: 9 + @width_adjust;   @rdz15_min: 9 + @width_adjust;
-@rdz16_maj: 7 + @width_adjust;  @rdz16_med: 12 + @width_adjust;  @rdz16_min: 12 + @width_adjust;
-@rdz17_maj: 16 + @width_adjust*2;  @rdz17_med: 20 + @width_adjust*2;  @rdz17_min: 20 + @width_adjust*2;
+@rdz16_maj: 7 + @width_adjust*1.5;  @rdz16_med: 12 + @width_adjust*1.5;  @rdz16_min: 12 + @width_adjust*1.5;
+@rdz17_maj: 16 + @width_adjust*2.5;  @rdz17_med: 20 + @width_adjust*2.5;  @rdz17_min: 20 + @width_adjust*2.5;
 @rdz18_maj: 22 + @width_adjust*2;  @rdz18_med: 26 + @width_adjust*2;  @rdz18_min: 26 + @width_adjust*2;
 
 /* ---- Bike Facilities ---------------------------------------------- */
@@ -319,14 +319,14 @@ come in as well.
   [zoom=11] {
     [stylegroup='motorway'] { line-width: @rdz11_maj; }
     [stylegroup='mainroad'] { line-width: @rdz11_med; }
-    [stylegroup='minorroad']{ line-width: 0 + @width_adjust; }
-    [stylegroup='railway']  { line-width: 0.2 + @width_adjust; }
+    [stylegroup='minorroad']{ line-width: 0; }
+    [stylegroup='railway']  { line-width: 0.2; }
   }
   [zoom=12] {
     [stylegroup='motorway'] { line-width: @rdz12_maj; }
     [stylegroup='mainroad'] { line-width: @rdz12_med; }
-    [stylegroup='minorroad']{ line-width: 0 + @width_adjust; }
-    [stylegroup='railway']  { line-width: 0.4 + @width_adjust; }
+    [stylegroup='minorroad']{ line-width: 0; }
+    [stylegroup='railway']  { line-width: 0.4; }
   }
   [zoom=13] {
     [stylegroup='motorway'] { line-width: @rdz13_maj; }

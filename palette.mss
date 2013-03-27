@@ -30,8 +30,8 @@ Map { font-directory: url(./fonts); }
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
 /* Note this is only implemented for certain things so far */
-@text_adjust: 0; /* 0 for non-retina. 4-ish for retina */
-@width_adjust: 0; /* 0 for non-retina. 2-ish for retina */
+@text_adjust: 7; /* 0 for non-retina. 7-ish for retina */
+@width_adjust: 2; /* 0 for non-retina. 2-ish for retina */
 @retina_color: 1; /* 1 for non-retina. 0.2-ish for retina */
 
 /* ================================================================== */
