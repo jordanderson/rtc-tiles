@@ -58,21 +58,21 @@ come in as well.
 @rdz12_maj: 2.5; @rdz12_med: 1.2; @rdz12_min: 0.8;
 @rdz13_maj: 3;   @rdz13_med: 1.5; @rdz13_min: 1;
 @rdz14_maj: 5;   @rdz14_med: 3.5;   @rdz14_min: 3.5;
-@rdz15_maj: 6 + @width_adjust*.4;   @rdz15_med: 9 + @width_adjust*.4;   @rdz15_min: 9 + @width_adjust*.4;
-@rdz16_maj: 7 + @width_adjust*1.5;  @rdz16_med: 12 + @width_adjust*1.5;  @rdz16_min: 12 + @width_adjust*1.5;
-@rdz17_maj: 16 + @width_adjust*2.5;  @rdz17_med: 20 + @width_adjust*2.5;  @rdz17_min: 20 + @width_adjust*2.5;
+@rdz15_maj: 6 + @width_adjust*.3;   @rdz15_med: 9 + @width_adjust*.3;   @rdz15_min: 6;
+@rdz16_maj: 7 + @width_adjust*1.5;  @rdz16_med: 12 + @width_adjust*1.2;  @rdz16_min: 10 + @width_adjust;
+@rdz17_maj: 16 + @width_adjust*2.5;  @rdz17_med: 20 + @width_adjust*2.2;  @rdz17_min: 17 + @width_adjust*1.5;
 @rdz18_maj: 22 + @width_adjust*2;  @rdz18_med: 26 + @width_adjust*2;  @rdz18_min: 26 + @width_adjust*2;
 
 /* ---- Bike Facilities ---------------------------------------------- */
 
-#bike_lane[zoom>=11] {
+#bike_lane[zoom>=13] {
   line-width: 1 + @width_adjust;
   line-color: @bike_lane;
   line-opacity: 0.8;
   [zoom=14] {line-opacity: 1.0; }
 }
 
-#bike_shared[zoom>=11] {
+#bike_shared[zoom>=13] {
   line-width: 1 + @width_adjust;
   line-color: @bike_shared;
   line-opacity: 0.8;
@@ -92,7 +92,7 @@ come in as well.
 
 }
 
-#greenway[zoom>=11] {
+#greenway[zoom>=13] {
     line-width: 1 + @width_adjust;
     line-color: @greenway;
     line-opacity: 0.9;
@@ -108,10 +108,8 @@ come in as well.
 
 
 #bike_lane,#bike_shared,#greenway {
-  [zoom=11] { line-width: 0.4; }
-  [zoom=12] { line-width: 0.6; }
-  [zoom=13] { line-width: 0.8 + @width_adjust; }
-  [zoom=14] { line-width: 0.8 + @width_adjust; }
+  [zoom=13] { line-width: 0.8; }
+  [zoom=14] { line-width: 0.8; }
   [zoom=15] { line-width: 1.2 + @width_adjust; }
   [zoom=16] { line-width: 2.0 + @width_adjust; }
   [zoom=17] { line-width: 3.0 + @width_adjust; }
