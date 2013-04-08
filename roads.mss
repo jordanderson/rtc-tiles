@@ -57,9 +57,9 @@ come in as well.
 @rdz11_maj: 0.1; @rdz11_med: 0.1; @rdz11_min: 0.1;
 @rdz12_maj: 2.5; @rdz12_med: 1.2; @rdz12_min: 0.8;
 @rdz13_maj: 3;   @rdz13_med: 1.5; @rdz13_min: 1;
-@rdz14_maj: 5;   @rdz14_med: 3.5;   @rdz14_min: 3.5;
-@rdz15_maj: 6 + @width_adjust*.3;   @rdz15_med: 9 + @width_adjust*.3;   @rdz15_min: 6;
-@rdz16_maj: 7 + @width_adjust*1.5;  @rdz16_med: 12 + @width_adjust*1.2;  @rdz16_min: 10 + @width_adjust;
+@rdz14_maj: 5;   @rdz14_med: 3.5;   @rdz14_min: 3;
+@rdz15_maj: 6 + @width_adjust*.3;   @rdz15_med: 9 + @width_adjust*.3; @rdz15_min: 4.5;
+@rdz16_maj: 7 + @width_adjust*1.5;  @rdz16_med: 12 + @width_adjust*1.2;  @rdz16_min: 8 + @width_adjust;
 @rdz17_maj: 16 + @width_adjust*2.5;  @rdz17_med: 20 + @width_adjust*2.2;  @rdz17_min: 17 + @width_adjust*1.5;
 @rdz18_maj: 22 + @width_adjust*2;  @rdz18_med: 26 + @width_adjust*2;  @rdz18_min: 26 + @width_adjust*2;
 

@@ -580,7 +580,7 @@
   [zoom=11] { text-min-distance:100; }
   [zoom=12] { text-min-distance:120; }
   [zoom=13] { text-min-distance:140; }
-  [zoom>=14] { text-size:9 + @text_adjust; }
+  [zoom>=14] { text-size:10 + @text_adjust; }
   [zoom=17] { text-size:11 + @text_adjust; }
   [zoom=18] { text-size:12 + @text_adjust; }
 
@@ -600,8 +600,10 @@
   text-character-spacing: 0.6;
   text-halo-radius:1;
   text-min-distance:150;
+  text-avoid-edges: true;
   text-size:10 + @text_adjust;
-  [zoom>16] { text-size:14 + @text_adjust; }
+  [zoom>=15] {text-halo-radius:2; }
+  [zoom>16] { text-size:15 + @text_adjust; }
   [zoom=17] { text-size:13 + @text_adjust; }
   [zoom=18] { text-size:16 + @text_adjust; }
 }
@@ -619,6 +621,7 @@
   text-halo-radius:1;
   text-min-distance:1000;
   text-size:10 + @text_adjust;
+  [zoom>=15] {text-halo-radius:2; }
   [zoom>16] { text-size:14 + @text_adjust; text-halo-radius:2;}
   [zoom=17] { text-size:14 + @text_adjust; }
   [zoom=18] { text-size:17 + @text_adjust; }
