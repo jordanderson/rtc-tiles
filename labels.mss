@@ -640,7 +640,9 @@
   marker-spacing: 200;
   marker-line-color: #fff;
   marker-file: url(img/icon/oneway.svg);
-  [zoom=17] {marker-transform:"scale(1.5)";}
+  marker-transform:@one_way_scale_15;
+  [zoom=16] {marker-transform:@one_way_scale_16;}
+  [zoom=17] {marker-transform:@one_way_scale_17;}
   [zoom=18] {marker-transform:"scale(2)";}
   [oneway=-1] { marker-file: url(img/icon/oneway-reverse.svg); }
 }

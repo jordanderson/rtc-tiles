@@ -54,8 +54,8 @@ more than just automobile routes - railways, footways, and cycleways
 come in as well.
 
 /* Road width variables that are used in road & bridge styles */
-@rdz11_maj: 0.1; @rdz11_med: 0.1; @rdz11_min: 0.1;
-@rdz12_maj: 2.5; @rdz12_med: 1.2; @rdz12_min: 0.8;
+@rdz11_maj: 0.1; @rdz11_med: 0.1; @rdz11_min: 0;
+@rdz12_maj: 2.5; @rdz12_med: 1.2; @rdz12_min: 0;
 @rdz13_maj: 3;   @rdz13_med: 1.5; @rdz13_min: 1;
 @rdz14_maj: 5;   @rdz14_med: 3.5;   @rdz14_min: 3;
 @rdz15_maj: 6 + @width_adjust*.3;   @rdz15_med: 9 + @width_adjust*.3; @rdz15_min: 4.5;

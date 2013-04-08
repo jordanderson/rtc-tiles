@@ -29489,8 +29489,8 @@
        <Parameter name="id"><![CDATA[roads_high]]></Parameter>
        <Parameter name="key_field"><![CDATA[]]></Parameter>
        <Parameter name="password"><![CDATA[]]></Parameter>
-       <Parameter name="project"><![CDATA[osm-bright-master]]></Parameter>
-       <Parameter name="srs"><![CDATA[null]]></Parameter>
+       <Parameter name="project"><![CDATA[RidetheCity]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
        <Parameter name="table"><![CDATA[( SELECT way, COALESCE(highway, railway) AS type, 0 AS tunnel, 0 AS bridge, access, 'fill' AS render,
   CASE
     WHEN highway IN ('motorway', 'trunk') THEN 'motorway'
@@ -29677,6 +29677,9 @@
 ) AS data]]></Parameter>
        <Parameter name="type"><![CDATA[postgis]]></Parameter>
        <Parameter name="user"><![CDATA[osm]]></Parameter>
+       <Parameter name="id"><![CDATA[roads_low]]></Parameter>
+       <Parameter name="project"><![CDATA[RidetheCity]]></Parameter>
+       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -48548,17 +48551,17 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'university')</Filter>
-    <TextSymbolizer fill="#525252" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([type] = 'school')</Filter>
     <TextSymbolizer fill="#525252" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([type] = 'college')</Filter>
+    <TextSymbolizer fill="#525252" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'university')</Filter>
     <TextSymbolizer fill="#525252" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -48573,11 +48576,6 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'library')</Filter>
-    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([type] = 'museum')</Filter>
     <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
@@ -48588,22 +48586,7 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'beach')</Filter>
-    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'bus_station')</Filter>
-    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'theatre')</Filter>
-    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'monument')</Filter>
+    <Filter>([type] = 'train_station')</Filter>
     <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -48613,8 +48596,33 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'train_station')</Filter>
+    <Filter>([type] = 'monument')</Filter>
     <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'theatre')</Filter>
+    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'bus_station')</Filter>
+    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'library')</Filter>
+    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'beach')</Filter>
+    <TextSymbolizer fill="#363636" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([type] = 'swimming_pool')</Filter>
+    <TextSymbolizer fill="#4f5a47" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -48624,11 +48632,6 @@
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <Filter>([type] = 'golf_course')</Filter>
-    <TextSymbolizer fill="#4f5a47" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>750000</MaxScaleDenominator>
-    <Filter>([type] = 'swimming_pool')</Filter>
     <TextSymbolizer fill="#4f5a47" halo-fill="rgba(255, 255, 255, 0.75)" halo-radius="2" fontset-name="fontset-0" wrap-width="30" ><![CDATA['']]></TextSymbolizer>
   </Rule>
 </Style>
@@ -48683,13 +48686,20 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'trunk')</Filter>
     <TextSymbolizer size="18" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'trunk')</Filter>
+    <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'trunk')</Filter>
     <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -48733,13 +48743,20 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'motorway')</Filter>
     <TextSymbolizer size="18" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'motorway')</Filter>
+    <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'motorway')</Filter>
     <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -48781,12 +48798,18 @@
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1)</Filter>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
@@ -48800,13 +48823,20 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'trunk')</Filter>
     <TextSymbolizer size="18" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'trunk')</Filter>
+    <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'trunk')</Filter>
     <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -48850,13 +48880,20 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'motorway')</Filter>
     <TextSymbolizer size="18" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'motorway')</Filter>
+    <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'motorway')</Filter>
     <TextSymbolizer size="17" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" halo-radius="1" minimum-distance="160" character-spacing="1.5" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -48898,12 +48935,18 @@
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0)</Filter>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0)</Filter>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] != 0)</Filter>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
@@ -49026,58 +49069,32 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'secondary')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
-    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
-    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
-    <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
-    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49092,25 +49109,72 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([oneway] = -1) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
+    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
+    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
+    <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([oneway] = -1) and ([type] = 'primary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49123,12 +49187,18 @@
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1)</Filter>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
@@ -49142,25 +49212,72 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'secondary')</Filter>
+    <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49175,20 +49292,27 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'primary')</Filter>
     <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0) and ([type] = 'primary')</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'primary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] != 0) and ([type] = 'primary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
@@ -49199,80 +49323,82 @@
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
-    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([oneway] != 0)</Filter>
     <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
-    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+    <Filter>([oneway] != 0)</Filter>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0)</Filter>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([oneway] != 0)</Filter>
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([type] = 'secondary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([type] = 'secondary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([oneway] != 0) and ([type] = 'tertiary')</Filter>
+    <Filter>([type] = 'secondary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([oneway] != 0)</Filter>
-    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([oneway] != 0)</Filter>
-    <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([oneway] != 0)</Filter>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'secondary')</Filter>
+    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -49302,35 +49428,6 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([type] = 'primary')</Filter>
-    <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>2500</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
-    <TextSymbolizer size="23" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>2500</MinScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
-    <TextSymbolizer size="20" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>1500</MaxScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
-    <TextSymbolizer size="22" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
-    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'tertiary')</Filter>
     <TextSymbolizer fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" halo-radius="1" minimum-distance="150" avoid-edges="true" size="17" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
@@ -49372,20 +49469,27 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
     <TextSymbolizer size="21" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] = -1)</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer file="img/icon/oneway-reverse.svg" transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
     <TextSymbolizer size="21" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] = -1)</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" />
+    <MarkersSymbolizer file="img/icon/oneway-reverse.svg" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -49405,20 +49509,27 @@
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([oneway] != 0)</Filter>
     <TextSymbolizer size="21" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" ><![CDATA[[name]]]></TextSymbolizer>
+    <MarkersSymbolizer transform="scale(2)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([oneway] != 0)</Filter>
+    <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" size="17" ><![CDATA[[name]]]></TextSymbolizer>
     <MarkersSymbolizer transform="scale(1.5)" placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([oneway] != 0)</Filter>
     <TextSymbolizer size="21" halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <MinScaleDenominator>5000</MinScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([oneway] != 0)</Filter>
     <TextSymbolizer halo-radius="2" fontset-name="fontset-0" placement="line" fill="#444444" halo-fill="#ffffff" character-spacing="0.6" minimum-path-length="100" avoid-edges="true" minimum-distance="1000" size="17" ><![CDATA[[name]]]></TextSymbolizer>
-    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" />
+    <MarkersSymbolizer placement="line" max-error="0.5" spacing="200" stroke="#ffffff" file="img/icon/oneway.svg" transform="scale(1)" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>

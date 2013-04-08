@@ -27,12 +27,14 @@ Map { font-directory: url(./fonts); buffer-size: 512; }
 @sans_italic:       "Open Sans Semibold Italic","DejaVu Sans Italic","unifont Medium";
 @sans_bold_italic:  "Open Sans Bold Italic","DejaVu Sans Bold Italic","unifont Medium";
 
-/* Some fonts are larger or smaller than others. Use this variable to
-   globally increase or decrease the font sizes. */
-/* Note this is only implemented for certain things so far */
-@text_adjust: 7; /* 0 for non-retina. 7-ish for retina */
-@width_adjust: 2; /* 0 for non-retina. 2-ish for retina */
-@retina_color: 1; /* 1 for non-retina. 0.2-ish for retina */
+/* Retina adjustments */
+@text_adjust: 		0; /* 0 for non-retina. 7-ish for retina */
+@width_adjust: 		0; /* 0 for non-retina. 2-ish for retina */
+@retina_color: 		1; /* 1 for non-retina. 1 for retina */
+@one_way_scale_15: 	"scale(1)";
+@one_way_scale_16: 	"scale(1)"; /* 1 for non-retina. 1.5 for retina */
+@one_way_scale_17: 	"scale(1.5)"; /* 1.5 for non-retina. 2 for retina */
+
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
